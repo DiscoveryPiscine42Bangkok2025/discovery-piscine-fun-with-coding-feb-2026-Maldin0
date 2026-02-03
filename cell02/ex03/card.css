@@ -1,0 +1,197 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Card Container */
+.card-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Invisible Table - border and spacing removed */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    background: transparent;
+}
+
+.profile-table td {
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Profile Picture */
+.profile-picture-cell {
+    padding-top: 0;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #667eea;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Login */
+.login-cell {
+    padding-top: 15px;
+}
+
+.login {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Description */
+.description-cell {
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Social Media Icons */
+.social-cell {
+    padding: 20px 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+}
+
+.social-link img {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Button */
+.button-cell {
+    padding-top: 20px;
+}
+
+.contact-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+}
+
+.contact-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .card-container {
+        padding: 30px 20px;
+    }
+    
+    .card-title {
+        font-size: 24px;
+    }
+    
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .login {
+        font-size: 20px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+    
+    .social-link img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .contact-button {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+}

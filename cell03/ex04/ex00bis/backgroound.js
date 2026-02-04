@@ -7,7 +7,5 @@ $(document).ready(function() {
         const randomColor = `rgb(${r}, ${g}, ${b})`;
         
         $('body').css('background-color', randomColor);
-        
-        $('.color-display').text(`Current Color: ${randomColor}`);
     });
 });
